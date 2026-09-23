@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 560" role="img" aria-label="Ilustrasi mobil 4x4 menerjang lumpur">
+  <defs>
+    <linearGradient id="mud" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B2591A"/><stop offset="1" stop-color="#5b2a10"/></linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3E4E59"/><stop offset="1" stop-color="#2E3C46"/></linearGradient>
+  </defs>
+  <!-- tanah & lumpur -->
+  <path d="M0 470 C140 452 260 486 400 468 S680 452 820 474 1000 462 1100 470 V560 H0Z" fill="url(#mud)" opacity=".85"/>
+  <path d="M0 500 C180 486 300 520 470 500 S760 488 900 508 1040 498 1100 502 V560 H0Z" fill="#3a1b0c" opacity=".7"/>
+  <!-- cipratan lumpur -->
+  <g fill="#B2591A" opacity=".9">
+    <path d="M232 440c-40-10-84-46-98-86 34 14 62 34 82 62 6 8 12 16 16 24z"/>
+    <path d="M206 456c-30-2-64-20-88-44 30 4 58 14 80 30z" opacity=".75"/>
+    <path d="M900 448c34-14 70-48 82-90-30 18-52 40-70 68z"/>
+    <circle cx="150" cy="334" r="9"/><circle cx="118" cy="372" r="6"/><circle cx="990" cy="342" r="8"/><circle cx="1024" cy="384" r="5"/>
+  </g>
+  <!-- bodi -->
+  <path d="M246 372V300l54-4 22-64h282l14 64 226 4 52 18 16 54z" fill="url(#body)" stroke="#9BC6DB" stroke-opacity=".45" stroke-width="2"/>
+  <path d="M336 246h130v50H328zM484 246h114l8 50H484z" fill="#9BC6DB" fill-opacity=".22" stroke="#9BC6DB" stroke-opacity=".5" stroke-width="1.5"/>
+  <!-- roof rack, snorkel, lampu -->
+  <path d="M324 226h274M340 226v-12h20v12M420 226v-12h20v12M500 226v-12h20v12M580 226v-12h18v12" stroke="#D27B1D" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M614 296V196q0-10 10-10h10" stroke="#8EA6A8" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <circle cx="884" cy="330" r="13" fill="#FFB779"/><circle cx="884" cy="330" r="6" fill="#fff"/>
+  <path d="M246 340h654" stroke="#D27B1D" stroke-width="5" opacity=".9"/>
+  <path d="M896 372h44v14h-60z" fill="#1F1719"/>
+  <!-- roda -->
+  <g>
+    <circle cx="350" cy="414" r="74" fill="#150c0e"/><circle cx="350" cy="414" r="74" fill="none" stroke="#873F17" stroke-width="10" stroke-dasharray="14 9"/>
+    <circle cx="350" cy="414" r="40" fill="#3E4E59"/><circle cx="350" cy="414" r="14" fill="#1F1719"/>
+    <circle cx="790" cy="414" r="74" fill="#150c0e"/><circle cx="790" cy="414" r="74" fill="none" stroke="#873F17" stroke-width="10" stroke-dasharray="14 9"/>
+    <circle cx="790" cy="414" r="40" fill="#3E4E59"/><circle cx="790" cy="414" r="14" fill="#1F1719"/>
+  </g>
+  <!-- lumpur di bodi -->
+  <path d="M250 372c30 14 60 6 84 22l-4 18c-30-6-64-4-84-18z M746 376c34 10 62 4 92 20l-6 16c-32-6-64-4-88-16z" fill="#873F17" opacity=".75"/>
+</svg>

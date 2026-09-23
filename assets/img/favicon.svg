@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="offroad.web.id">
+  <path d="M4 4h32l8 8v32H4z" fill="#D27B1D"/>
+  <path d="M8 34l10-16 6 9 5-7 11 14z" fill="#1F1719"/>
+  <circle cx="34" cy="14" r="3" fill="#1F1719"/>
+  <path d="M8 40h32" stroke="#1F1719" stroke-width="3" stroke-dasharray="4 3"/>
+</svg>
