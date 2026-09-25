@@ -7,7 +7,7 @@
 
   /* ---- KONFIGURASI: ganti sebelum go-live ------------------- */
   var SITE = {
-    wa: '6281234567890',          // nomor WhatsApp CS (format internasional tanpa +)
+    wa: '6282211221909',          // nomor WhatsApp CS (format internasional tanpa +)
     email: 'info@offroad.web.id'
   };
   var $  = function (s, r) { return (r || document).querySelector(s); };
@@ -195,11 +195,20 @@
       var img = $('img', card), holder = $('.lb-media', lb);
       holder.innerHTML = '';
       if (img && !img.classList.contains('is-broken')) {
-        var c = document.createElement('img'); c.src = img.src; c.alt = img.alt; c.referrerPolicy = 'no-referrer';
-        c.style.cssText = 'width:100%;height:100%;object-fit:cover'; holder.appendChild(c);
+        var c = document.createElement('img'); c.src = img.src; c.alt = img.alt;
+        c.style.cssText = 'max-height:72vh;max-width:100%;width:auto;height:auto;object-fit:contain;margin:auto;display:block';
+        holder.appendChild(c);
       }
       $('.lb-title', lb).textContent = $('h3', card).textContent;
       $('.lb-meta', lb).textContent = $('.g-meta', card) ? $('.g-meta', card).textContent.replace(/\s+/g, ' ').trim() : '';
+    });
+
+    $$('.g-card').forEach(function (card) {
+      card.addEventListener('click', function (e) {
+        if (e.target.closest('.g-open') || e.target.closest('a') || e.target.closest('button')) return;
+        var btn = $('.g-open', card);
+        if (btn) btn.click();
+      });
     });
   }
 

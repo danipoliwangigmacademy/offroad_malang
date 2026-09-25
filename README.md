@@ -16,7 +16,7 @@ sudah ada di `assets/`, jadi situs tidak bergantung pada CDN.
 
 ## Yang WAJIB diganti sebelum go-live
 Seluruh nama, angka, dan klaim di situs ini adalah **contoh dari desain** dan belum diverifikasi.
-1. ~~Nomor WhatsApp~~ — sudah diset ke `0889-8964-3555` (https://wa.me/6288989643555) di semua file `.html` dan `assets/js/main.js`. Ganti lagi jika nomor berubah.
+1. ~~Nomor WhatsApp~~ — sudah diset ke `0822-1122-1909` (https://wa.me/6282211221909) di semua file `.html` dan `assets/js/main.js`. Ganti lagi jika nomor berubah.
 2. ~~Alamat & wilayah~~ — sudah difokuskan ke Kota Batu, Malang, Jawa Timur (basecamp utama: Jl. Raya Selecta No. 1, Songgoriti). **Verifikasi alamat asli** sebelum go-live — alamat, koordinat (`geo.position`/`ICBM` di setiap `<head>`, serta `geo` di JSON-LD) masih perkiraan berdasarkan pusat Kota Batu.
 3. **Email**: `info@offroad.web.id`, `b2b@offroad.web.id` — masih domain contoh, sesuaikan bila perlu.
 4. **Legalitas** (`tentang-kami.html`): isi bagian bertanda `[isi ...]` (nama PT, NIB, CHSE, asuransi).
