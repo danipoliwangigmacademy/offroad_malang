@@ -80,8 +80,10 @@
 
   /* ---- Filter kartu (paket / galeri / blog) ------------------ */
   function initFilter(cfg) {
-    var tabs = $$(cfg.tabs); if (!tabs.length) return;
-    var items = $$(cfg.items), empty = $(cfg.empty);
+    var items = $$(cfg.items);
+    if (!items.length) return;
+    var tabs = cfg.tabs ? $$(cfg.tabs) : [];
+    var empty = cfg.empty ? $(cfg.empty) : null;
     var state = { cat: 'all', q: '', loc: '', dur: '', grade: '' };
     function apply() {
       var shown = 0;
@@ -99,17 +101,42 @@
       if (empty) empty.classList.toggle('show', shown === 0);
       var counter = $(cfg.counter); if (counter) counter.textContent = shown;
     }
-    tabs.forEach(function (t) {
-      t.addEventListener('click', function () {
-        tabs.forEach(function (x) { x.classList.remove('active'); x.setAttribute('aria-pressed', 'false'); });
-        t.classList.add('active'); t.setAttribute('aria-pressed', 'true');
-        state.cat = t.dataset.filter || 'all'; apply();
+    if (tabs.length) {
+      tabs.forEach(function (t) {
+        t.addEventListener('click', function () {
+          tabs.forEach(function (x) { x.classList.remove('active'); x.setAttribute('aria-pressed', 'false'); });
+          t.classList.add('active'); t.setAttribute('aria-pressed', 'true');
+          state.cat = t.dataset.filter || 'all'; apply();
+        });
       });
-    });
-    var s = $(cfg.search); if (s) s.addEventListener('input', function () { state.q = s.value.trim().toLowerCase(); apply(); });
+    }
+    var s = $(cfg.search);
+    if (s) {
+      s.addEventListener('input', function () { state.q = s.value.trim().toLowerCase(); apply(); });
+      s.addEventListener('search', function () { state.q = s.value.trim().toLowerCase(); apply(); });
+    }
     [['loc', cfg.loc], ['dur', cfg.dur], ['grade', cfg.grade]].forEach(function (p) {
-      var el = p[1] && $(p[1]); if (el) el.addEventListener('change', function () { state[p[0]] = el.value; apply(); });
+      var el = p[1] && $(p[1]);
+      if (el) {
+        var onSelect = function () { state[p[0]] = el.value; apply(); };
+        el.addEventListener('change', onSelect);
+        el.addEventListener('input', onSelect);
+      }
     });
+    var resetFn = function () {
+      state = { cat: 'all', q: '', loc: '', dur: '', grade: '' };
+      if (s) s.value = '';
+      [['loc', cfg.loc], ['dur', cfg.dur], ['grade', cfg.grade]].forEach(function (p) {
+        var el = p[1] && $(p[1]); if (el) el.value = '';
+      });
+      if (tabs.length) {
+        tabs.forEach(function (x) { x.classList.remove('active'); x.setAttribute('aria-pressed', 'false'); });
+        if (tabs[0]) { tabs[0].classList.add('active'); tabs[0].setAttribute('aria-pressed', 'true'); }
+      }
+      apply();
+    };
+    var rst = $('#btnResetFilter'); if (rst) rst.addEventListener('click', resetFn);
+    var empRst = $('#emptyResetBtn'); if (empRst) empRst.addEventListener('click', resetFn);
     apply();
   }
   initFilter({ tabs: '#pkgTabs .tab-pill', items: '.pkg-card[data-cat]', empty: '#pkgEmpty', counter: '#pkgCount',
