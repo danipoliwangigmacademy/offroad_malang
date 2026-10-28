@@ -303,45 +303,62 @@
             ATV</button>
         </div>
         <div class="row g-2 ox-form align-items-center">
-          <div class="col-lg-3 col-md-6">
-            <label class="visually-hidden" for="routeSearch">Cari paket</label>
-            <input id="routeSearch" class="form-control" type="search"
-              placeholder="Ketik nama rute atau paket...">
+          <div class="col-lg-3 col-12">
+            <div class="d-flex gap-2">
+              <div class="position-relative flex-grow-1">
+                <label class="visually-hidden" for="routeSearch">Cari paket</label>
+                <input id="routeSearch" class="form-control" type="search"
+                  placeholder="Ketik nama rute atau paket...">
+              </div>
+              <button class="btn-ox btn-ghost btn-filter-toggle d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#advancedFilter" aria-expanded="false" aria-controls="advancedFilter" id="btnFilterToggle"
+                aria-label="Filter tambahan">
+                <i class="bi bi-sliders"></i>
+                <span>Filter</span>
+                <span class="filter-count-badge d-none" id="filterCountBadge">0</span>
+              </button>
+            </div>
           </div>
-          <div class="col-lg-3 col-md-6">
-            <label class="visually-hidden" for="fLoc">Lokasi</label>
-            <select id="fLoc" class="form-select">
-              <option value="">Semua lokasi jalur</option>
-              <option value="batu">Coban Rondo – Kota Batu</option>
-              <option value="pujon">Pujon &amp; Sungai Kasembon</option>
-              <option value="selecta">Selecta, Sumber Brantas &amp; Cangar</option>
-              <option value="payung">Coban Talun &amp; Gunung Panderman</option>
-              <option value="bromo">Gunung Bromo – Penanjakan</option>
-            </select>
-          </div>
-          <div class="col-lg-2 col-md-4">
-            <label class="visually-hidden" for="fDur">Durasi</label>
-            <select id="fDur" class="form-select">
-              <option value="">Semua durasi</option>
-              <option value="oneday">1 Hari (4–8 jam)</option>
-              <option value="2d1n">Menginap 2 Hari 1 Malam</option>
-              <option value="3d2n">Menginap 3 Hari 2 Malam</option>
-            </select>
-          </div>
-          <div class="col-lg-2 col-md-4">
-            <label class="visually-hidden" for="fGrade">Tingkat kesulitan jalur</label>
-            <select id="fGrade" class="form-select">
-              <option value="">Semua level jalur</option>
-              <option value="medium">Santai (Ramah anak &amp; lansia)</option>
-              <option value="challenging">Seru (Lumpur &amp; sungai sedang)</option>
-              <option value="hardcore">Ekstrem (Lumpur dalam &amp; jeram)</option>
-            </select>
-          </div>
-          <div class="col-lg-2 col-md-4">
-            <button id="btnResetFilter" class="btn-ox btn-ghost btn-sm-ox w-100" type="button" title="Reset filter"
-              aria-label="Reset semua filter">
-              <i class="bi bi-arrow-counterclockwise"></i> Reset Filter
-            </button>
+          <div class="col-lg-9 col-12">
+            <div class="collapse d-lg-block" id="advancedFilter">
+              <div class="row g-2 align-items-center pt-2 pt-lg-0">
+                <div class="col-12 col-md-4 col-lg-4">
+                  <label class="visually-hidden" for="fLoc">Lokasi</label>
+                  <select id="fLoc" class="form-select">
+                    <option value="">Semua lokasi jalur</option>
+                    <option value="batu">Coban Rondo – Kota Batu</option>
+                    <option value="pujon">Pujon &amp; Sungai Kasembon</option>
+                    <option value="selecta">Selecta, Sumber Brantas &amp; Cangar</option>
+                    <option value="payung">Coban Talun &amp; Gunung Panderman</option>
+                    <option value="bromo">Gunung Bromo – Penanjakan</option>
+                  </select>
+                </div>
+                <div class="col-6 col-md-3 col-lg-3">
+                  <label class="visually-hidden" for="fDur">Durasi</label>
+                  <select id="fDur" class="form-select">
+                    <option value="">Semua durasi</option>
+                    <option value="oneday">1 Hari (4–8 jam)</option>
+                    <option value="2d1n">Menginap 2 Hari 1 Malam</option>
+                    <option value="3d2n">Menginap 3 Hari 2 Malam</option>
+                  </select>
+                </div>
+                <div class="col-6 col-md-3 col-lg-3">
+                  <label class="visually-hidden" for="fGrade">Tingkat kesulitan jalur</label>
+                  <select id="fGrade" class="form-select">
+                    <option value="">Semua level jalur</option>
+                    <option value="medium">Santai (Ramah anak &amp; lansia)</option>
+                    <option value="challenging">Seru (Lumpur &amp; sungai sedang)</option>
+                    <option value="hardcore">Ekstrem (Lumpur dalam &amp; jeram)</option>
+                  </select>
+                </div>
+                <div class="col-12 col-md-2 col-lg-2">
+                  <button id="btnResetFilter" class="btn-ox btn-ghost btn-sm-ox w-100" type="button" title="Reset filter"
+                    aria-label="Reset semua filter">
+                    <i class="bi bi-arrow-counterclockwise"></i> Reset Filter
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -685,7 +702,7 @@
             <div class="val-card h-100">
               <div class="media mb-3"
                 style="aspect-ratio: 16/10; border-radius: var(--ox-radius-sm); overflow: hidden;">
-                <img src="assets/img/tentang-kami/spesifikasi_safety_emergency_kit_satelit.webp"
+                <img src="assets/img/galeri/rigging_winch_recovery_offroad_panderman.webp"
                   alt="Daihatsu Taft GT Rocky 4x4 Offroad Batu" loading="lazy" decoding="async"
                   onerror="this.classList.add('is-broken')" style="width:100%;height:100%;object-fit:cover;">
               </div>

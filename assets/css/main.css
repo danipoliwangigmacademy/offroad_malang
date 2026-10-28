@@ -383,11 +383,18 @@ img{max-width:100%;height:auto}
 .big-quote blockquote{margin:.7rem 0 1rem;font-size:1.08rem;line-height:1.75;color:#eee6e7}
 
 /* Paket */
-.filter-bar{position:sticky;top:var(--nav-h);z-index:20;background:rgba(27,17,19,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--ox-line);padding:1rem 0}
-.tab-row{display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.35rem;scrollbar-width:thin}
+.filter-bar{position:sticky;top:var(--nav-h);z-index:20;background:rgba(27,17,19,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--ox-line);padding:1rem 0;transition:transform .28s cubic-bezier(.2,.8,.2,1)}
+@media (max-width:991.98px){
+  .filter-bar.is-scrolled-down{transform:translateY(calc(-100% - var(--nav-h)));pointer-events:none}
+}
+.tab-row{display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.35rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.tab-row::-webkit-scrollbar{display:none}
 .tab-pill{flex:none;padding:.5rem 1rem;background:var(--ox-charcoal);border:1px solid var(--ox-line);border-radius:4px;color:var(--ox-text2);font:800 .72rem var(--ox-head);letter-spacing:.07em;text-transform:uppercase;cursor:pointer;transition:.2s}
 .tab-pill:hover{color:#fff;border-color:var(--ox-teal)}
 .tab-pill.active{background:var(--ox-amber);border-color:var(--ox-amber);color:var(--ox-ground)}
+.btn-filter-toggle{flex:none;display:inline-flex;align-items:center;gap:.45rem;padding:.75rem .95rem;font:800 .78rem var(--ox-head);letter-spacing:.05em;text-transform:uppercase;white-space:nowrap;border-radius:4px}
+.btn-filter-toggle.is-active{background:rgba(210,123,29,.15);border-color:var(--ox-amber);color:var(--ox-amber-lt)}
+.filter-count-badge{display:inline-flex;align-items:center;justify-content:center;min-width:18px;height:18px;padding:0 5px;background:var(--ox-amber);color:var(--ox-ground);border-radius:9px;font:900 .7rem/1 var(--ox-head);letter-spacing:0}
 .pkg-lg .pkg-media{aspect-ratio:16/8}
 .pkg-lg .pkg-body h3{font-size:1.35rem}
 .mini-specs{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:1rem 0 .4rem;border:1px solid var(--ox-line);border-radius:6px;overflow:hidden;background:rgba(27,17,19,.3)}

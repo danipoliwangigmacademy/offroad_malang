@@ -100,6 +100,15 @@
       });
       if (empty) empty.classList.toggle('show', shown === 0);
       var counter = $(cfg.counter); if (counter) counter.textContent = shown;
+      if (cfg.badge && $(cfg.badge)) {
+        var activeCount = (state.loc ? 1 : 0) + (state.dur ? 1 : 0) + (state.grade ? 1 : 0);
+        var b = $(cfg.badge);
+        b.textContent = activeCount;
+        b.classList.toggle('d-none', activeCount === 0);
+        if (cfg.toggleBtn && $(cfg.toggleBtn)) {
+          $(cfg.toggleBtn).classList.toggle('is-active', activeCount > 0);
+        }
+      }
     }
     if (tabs.length) {
       tabs.forEach(function (t) {
@@ -107,6 +116,9 @@
           tabs.forEach(function (x) { x.classList.remove('active'); x.setAttribute('aria-pressed', 'false'); });
           t.classList.add('active'); t.setAttribute('aria-pressed', 'true');
           state.cat = t.dataset.filter || 'all'; apply();
+          if (t.scrollIntoView && window.innerWidth < 768) {
+            t.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          }
         });
       });
     }
@@ -140,9 +152,33 @@
     apply();
   }
   initFilter({ tabs: '#pkgTabs .tab-pill', items: '.pkg-card[data-cat]', empty: '#pkgEmpty', counter: '#pkgCount',
-               search: '#routeSearch', loc: '#fLoc', dur: '#fDur', grade: '#fGrade' });
+               search: '#routeSearch', loc: '#fLoc', dur: '#fDur', grade: '#fGrade',
+               badge: '#filterCountBadge', toggleBtn: '#btnFilterToggle' });
   initFilter({ tabs: '#galTabs .tab-pill', items: '.g-card[data-cat]', empty: '#galEmpty', counter: '#galCount', loc: '#gLoc' });
   initFilter({ tabs: '#blogTabs .tab-pill', items: '.post-card[data-cat]', empty: '#blogEmpty', counter: '#blogCount', search: '#blogSearch' });
+
+  /* ---- Filter bar dinamis pada mobile (hide saat scroll ke bawah, show saat scroll ke atas) ---- */
+  var filterBar = $('.filter-bar');
+  if (filterBar) {
+    var lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+    window.addEventListener('scroll', function () {
+      var currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+      if (window.innerWidth < 992) {
+        var adv = $('#advancedFilter');
+        var isOpen = adv && adv.classList.contains('show');
+        if (!isOpen && Math.abs(currentScrollY - lastScrollY) > 8) {
+          if (currentScrollY > 260 && currentScrollY > lastScrollY) {
+            filterBar.classList.add('is-scrolled-down');
+          } else {
+            filterBar.classList.remove('is-scrolled-down');
+          }
+        }
+      } else {
+        filterBar.classList.remove('is-scrolled-down');
+      }
+      lastScrollY = currentScrollY;
+    }, { passive: true });
+  }
 
   /* ---- Pencarian blog: cegah reload -------------------------- */
   var bf = $('#blogSearchForm'); if (bf) bf.addEventListener('submit', function (e) { e.preventDefault(); });
