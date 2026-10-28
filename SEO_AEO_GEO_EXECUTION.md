@@ -13,7 +13,7 @@ You are working inside the static web project directory: `D:\laragon\www\offroad
 - **Tech Stack:** Pure HTML5, Bootstrap 5 (`assets/vendor/bootstrap`), Bootstrap Icons, Swiper.js, custom CSS (`assets/css/main.css`), and vanilla JS (`assets/js/main.js`). Dark theme (`data-bs-theme="dark"`).
 
 ## 2. CRITICAL RULES FOR THE AI AGENT
-1. **Use Native File Tools:** Always read existing HTML files (`index.html`, `paket-outbound.html`, `tentang-kami.html`, `galeri.html`, `blog.html`, `kontak.html`, `sitemap.xml`) before editing.
+1. **Use Native File Tools:** Always read existing HTML files (`index.html`, `paket.html`, `tentang-kami.html`, `galeri.html`, `blog.html`, `kontak.html`, `sitemap.xml`) before editing.
 2. **Preserve Visual & UI Styling:** DO NOT break or remove existing custom CSS classes (`hero`, `chip-amber`, `display-hero`, `lead-ox`, `btn-ox`, `pkg-card`, `val-card`, `b2b-card`, `ox-accordion`, etc.). All new HTML elements must use matching Bootstrap 5 dark-theme and custom `main.css` classes.
 3. **No AI Slop Copywriting:** Write in natural, authoritative, persuasive Indonesian (B2B Corporate & B2C Family friendly). Avoid colons (`:`) in main titles/headings and avoid robotic filler words.
 4. **Zero Broken Assets:** Only reference image files that actually exist inside `assets/img/` and its subdirectories (`blog/`, `galeri/`, `paket-outbound/`, `tentang-kami/`).
@@ -23,7 +23,7 @@ You are working inside the static web project directory: `D:\laragon\www\offroad
 ## 3. STEP-BY-STEP EXECUTION PLAN
 
 ### TASK 1: Fix Critical Entity & Trust Leaks Across All HTML Files
-Read `index.html`, `tentang-kami.html`, `paket-outbound.html`, `galeri.html`, `blog.html`, and `kontak.html`, then execute the following fixes:
+Read `index.html`, `tentang-kami.html`, `paket.html`, `galeri.html`, `blog.html`, and `kontak.html`, then execute the following fixes:
 
 1. **Remove Sitewide PBN/Link-Farm Footprint:**
    - Locate `<div class="footer-network">...</div>` inside `<footer class="site-footer">` across all HTML files.
@@ -102,9 +102,9 @@ Replace existing JSON-LD scripts in `index.html` with a rich `@graph` schema con
 
 ---
 
-### TASK 4: Optimize `paket-outbound.html` as a High-Converting Commercial Hub
+### TASK 4: Optimize `paket.html` as a High-Converting Commercial Hub
 
-Read `paket-outbound.html` and enhance it:
+Read `paket.html` and enhance it:
 
 1. Ensure it integrates the complete breakdown of **Corporate Outbound**, **Team Building**, **Family Camping / Glamping**, **ATV Adventure**, and **Jeep Offroad Batu Malang**.
 2. Add a clear section detailing **Spesifikasi Armada 4x4 (Toyota Land Cruiser FJ40 Hardtop, Jeep Willys Klasik, Suzuki Jimny/Katana, Daihatsu Taft GT)** and **SOP Keselamatan**.
@@ -123,7 +123,7 @@ Currently, in `index.html` and `blog.html`, all blog post cards link to a single
 * `blog/rute-offroad-cangar-vs-coban-talun-batu.html` (Thoroughly comparing **Coban Talun, Bukit Jengkoang, Coban Putri, Coban Rondo, and Cangar**).
 
 
-3. Each blog article must include proper `<title>`, `<meta name="description">`, `<link rel="canonical">`, `Article` + `BreadcrumbList` JSON-LD Schema, and contextual internal links pointing back to `../index.html#katalog-paket` and `../paket-outbound.html`.
+3. Each blog article must include proper `<title>`, `<meta name="description">`, `<link rel="canonical">`, `Article` + `BreadcrumbList` JSON-LD Schema, and contextual internal links pointing back to `../index.html#katalog-paket` and `../paket.html`.
 4. Update the `href` links in `index.html` (`#blog` section) and `blog.html` to point to these specific article URLs.
 5. Update `sitemap.xml` so all pages and the new `/blog/*.html` URLs are listed with accurate `<loc>` and `<lastmod>` (`2026-10-26`).
 

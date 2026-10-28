@@ -226,8 +226,13 @@
         c.style.cssText = 'max-height:72vh;max-width:100%;width:auto;height:auto;object-fit:contain;margin:auto;display:block';
         holder.appendChild(c);
       }
-      $('.lb-title', lb).textContent = $('h3', card).textContent;
+      $('.lb-title', lb).textContent = $('h3', card) ? $('h3', card).textContent : '';
       $('.lb-meta', lb).textContent = $('.g-meta', card) ? $('.g-meta', card).textContent.replace(/\s+/g, ' ').trim() : '';
+      var descEl = $('.lb-desc', lb);
+      if (descEl) {
+        var cardDesc = $('p', card);
+        descEl.textContent = cardDesc ? cardDesc.textContent.trim() : '';
+      }
     });
 
     $$('.g-card').forEach(function (card) {

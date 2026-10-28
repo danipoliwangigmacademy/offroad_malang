@@ -102,7 +102,7 @@
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Blog & Catatan Ekspedisi",
+            "name": "Blog",
             "item": "https://offroad.web.id/blog.html"
           }
         ]
@@ -111,7 +111,7 @@
         "@type": "Blog",
         "@id": "https://offroad.web.id/blog.html#blog",
         "url": "https://offroad.web.id/blog.html",
-        "name": "Blog & Catatan Ekspedisi Offroad Malang",
+        "name": "Blog Offroad Malang",
         "description": "Tips offroad, panduan outbound, dan ulasan rute wisata di Batu, Malang dari tim ekspedisi offroad.web.id.",
         "publisher": {
           "@id": "https://offroad.web.id/#organization"
@@ -138,7 +138,7 @@
       <div class="container">
         <a class="navbar-brand brand" href="index.html" aria-label="offroad.web.id — beranda">
           <img src="assets/img/logo-offroad.webp" width="38" height="38" alt="">
-          <span class="brand-text"><b>offroad<em>.web.id</em></b><small>4x4 Expedition &amp; Outbound</small></span>
+          <span class="brand-text"><b>offroad<em>.web.id</em></b></span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
           aria-controls="mainNav" aria-expanded="false" aria-label="Buka menu">
@@ -148,7 +148,7 @@
           <ul class="navbar-nav nav-ox mx-lg-auto">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="tentang-kami.html">Tentang Kami</a></li>
-            <li class="nav-item"><a class="nav-link" href="paket-outbound.html">Paket Outbound</a></li>
+            <li class="nav-item"><a class="nav-link" href="paket.html">Paket</a></li>
             <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
             <li class="nav-item"><a class="nav-link active" href="blog.html" aria-current="page">Blog</a></li>
             <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
@@ -164,17 +164,16 @@
       <nav aria-label="Breadcrumb">
         <ol class="crumbs">
           <li><a href="index.html"><i class="bi bi-house-door"></i>Beranda</a></li>
-          <li aria-current="page">Blog &amp; Catatan Ekspedisi</li>
+          <li aria-current="page">Blog</li>
         </ol>
       </nav>
     </div>
   </div>
   <main id="main">
-    <section class="page-hero" aria-labelledby="ph-title">
-      <div class="container">
-        <span class="chip chip-amber mb-4"><i class="bi bi-journal-text"></i>Field journal &amp; adventure
-          insights</span>
-        <h1 id="ph-title" style="max-width:24ch">Catatan ekspedisi, tips 4x4 &amp; panduan outbound korporat</h1>
+    <section class="page-hero has-bg" aria-labelledby="ph-title">
+      <div class="hero-bg media"><img src="assets/img/background-offroad.webp" alt="Catatan Ekspedisi Offroad 4x4 &amp; Panduan Outbound Batu Malang" fetchpriority="high" decoding="async" onerror="this.classList.add('is-broken')"></div>
+      <div class="container position-relative" style="z-index:1">
+        <h1 id="ph-title">Catatan ekspedisi, tips 4x4 &amp; panduan outbound korporat</h1>
         <p class="lead-ox">Wawasan seputar rute petualangan, cara merancang employee gathering yang efektif, teknik
           recovery offroad, dan standar keselamatan K3 di alam terbuka.</p>
         <form id="blogSearchForm" class="mt-4" style="max-width:640px" role="search">
@@ -216,7 +215,7 @@
         <div class="row g-5">
           <div class="col-lg-8">
             <div class="d-flex justify-content-between align-items-center mb-4">
-              <h2 id="list-title" class="h-lg mb-0">Artikel Terbaru</h2><small class="text-sage">Menampilkan
+              <h2 id="list-title" class="h-lg mb-0">Artikel Lainnya</h2><small class="text-sage">Menampilkan
                 <span id="blogCount">6</span> artikel</small>
             </div>
             <div class="row g-4">
@@ -237,22 +236,6 @@
                 </article>
               </div>
               <div class="col-md-6" data-item-wrap>
-                <article class="post-card" data-cat="corporate">
-                  <div class="media"><img
-                      src="assets/img/blog/evaluasi_vendor_outbound_corporate_gathering.webp"
-                      alt="Tim karyawan berhelm dan pelampung oranye bersorak setelah rafting" loading="lazy"
-                      decoding="async" onerror="this.classList.add('is-broken')"><span
-                      class="chip chip-dark">Corporate outbound</span></div>
-                  <div class="body">
-                    <h3><a href="blog/artikel.html" class="stretched-link">5 kesalahan fatal panitia HR saat memilih vendor gathering petualangan (dan cara menghindarinya)</a>
-                    </h3>
-                    <p>Dari legalitas SPK, asuransi pihak ketiga, kelayakan armada, hingga kesiapan evakuasi medis yang
-                      sering terlewat saat negosiasi proposal.</p>
-                  </div>
-                  <footer><span>Siti Nurhaliza, M.Psi</span><span>8 Mar 2026</span></footer>
-                </article>
-              </div>
-              <div class="col-md-6" data-item-wrap>
                 <article class="post-card" data-cat="rute">
                   <div class="media"><img
                       src="assets/img/blog/bedah_rute_offroad_cangar_coban_rondo.webp"
@@ -267,51 +250,6 @@
                   <footer><span>Tim Ekspedisi</span><span>2 Mar 2026</span></footer>
                 </article>
               </div>
-              <div class="col-md-6" data-item-wrap>
-                <article class="post-card" data-cat="safety">
-                  <div class="media"><img
-                      src="assets/img/blog/standar_medis_darurat_wilderness_trauma_kit.webp"
-                      alt="Paramedis lapangan menangani simulasi korban di medan terbuka" loading="lazy"
-                      decoding="async" onerror="this.classList.add('is-broken')"><span
-                      class="chip chip-dark">Safety K3 &amp; survival</span></div>
-                  <div class="body">
-                    <h3><a href="blog/artikel.html" class="stretched-link">Golden hour di medan terpencil: standar penanganan medis darurat kami</a></h3>
-                    <p>Trauma kit wajib, koordinasi radio VHF dan komunikator satelit, serta penanganan hipotermia dan
-                      fraktur sebelum bantuan tiba.</p>
-                  </div>
-                  <footer><span>dr. Adrian Perkasa</span><span>25 Feb 2026</span></footer>
-                </article>
-              </div>
-              <div class="col-md-6" data-item-wrap>
-                <article class="post-card" data-cat="corporate">
-                  <div class="media"><img
-                      src="assets/img/blog/simulasi_tantangan_outdoor_team_building.webp"
-                      alt="Foto udara konvoi safari 4x4 di lereng pegunungan" loading="lazy" decoding="async"
-                      onerror="this.classList.add('is-broken')"><span
-                      class="chip chip-dark">Corporate outbound</span></div>
-                  <div class="body">
-                    <h3><a href="blog/artikel.html" class="stretched-link">Mengapa aktivitas outdoor berbasis simulasi krisis lebih efektif meruntuhkan ego sektoral antar
-                      divisi</a></h3>
-                    <p>Rintangan lumpur memaksa kepemimpinan situasional, delegasi cepat, dan empati lintas level.</p>
-                  </div>
-                  <footer><span>Siti Nurhaliza, M.Psi</span><span>19 Feb 2026</span></footer>
-                </article>
-              </div>
-              <div class="col-md-6" data-item-wrap>
-                <article class="post-card" data-cat="teknikal">
-                  <div class="media"><img
-                      src="assets/img/blog/inspeksi_armada_gardan_ban_mt_offroad.webp"
-                      alt="Ban mud terrain 35 inci dengan tapak agresif" loading="lazy" decoding="async"
-                      onerror="this.classList.add('is-broken')"><span
-                      class="chip chip-dark">Teknikal 4x4</span></div>
-                  <div class="body">
-                    <h3><a href="blog/artikel.html" class="stretched-link">Checklist 24 titik inspeksi armada sebelum membawa rombongan tamu ke trek basah</a></h3>
-                    <p>Gardan, snorkel, transfer case 4WD, rem hidrolik, dan kelistrikan cadangan yang diperiksa sebelum
-                      konvoi dilepas.</p>
-                  </div>
-                  <footer><span>Bambang 'Gendon' W.</span><span>14 Feb 2026</span></footer>
-                </article>
-              </div>
             </div>
             <div id="blogEmpty" class="empty-state mt-4" role="status"><i
                 class="bi bi-journal-x display-6 text-amber"></i>
@@ -321,20 +259,17 @@
           </div>
           <aside class="col-lg-4" aria-label="Sidebar">
             <div class="side-card">
-              <div class="side-title"><span>Artikel</span><span class="chip">Terbaru</span></div>
+              <div class="side-title"><span class="chip chip-amber">Artikel Terbaru</span></div>
               <ol class="rank-list">
                 <li><span class="n">01</span>
-                  <div><a href="blog/artikel.html">Simulasi anggaran gathering outbound 4x4 untuk 50 peserta: rincian per item</a><small>Outbound HR</small></div>
+                  <div><a href="blog/panduan-corporate-gathering-offroad-batu.html">Panduan lengkap merancang corporate gathering 4x4 dan team building yang aman, terukur, dan membekas</a><small>Outbound HR</small></div>
                 </li>
                 <li><span class="n">02</span>
-                  <div><a href="blog/artikel.html">Winch elektrik vs winch PTO: mana yang lebih andal di lumpur dalam?</a><small>Modifikasi 4x4</small></div>
+                  <div><a href="blog/teknik-winching-recovery-offroad-lumpur.html">Mengenal teknik winching &amp; recovery di jalur berlumpur: prosedur aman tanpa risiko cedera</a><small>Modifikasi 4x4</small></div>
                 </li>
                 <li><span class="n">03</span>
-                  <div><a href="blog/artikel.html">Tips menjaga fisik dan mencegah mabuk perjalanan bagi peserta non-offroader</a><small>Panduan peserta</small>
+                  <div><a href="blog/rute-offroad-cangar-vs-coban-talun-batu.html">Bedah rute Sumber Brantas–Cangar vs Coban Rondo Batu: mana yang cocok untuk tim Anda?</a><small>Panduan peserta</small>
                   </div>
-                </li>
-                <li><span class="n">04</span>
-                  <div><a href="blog/artikel.html">Protokol evakuasi medis: ambulans 4x4 dan helikopter di lapangan</a><small>Standar K3</small></div>
                 </li>
               </ol>
             </div>
@@ -365,10 +300,8 @@
       <div class="row g-5">
         <div class="col-lg-3 col-md-6">
           <a class="brand mb-3" href="index.html"><img src="assets/img/logo-offroad.webp" width="38" height="38"
-              alt=""><span class="brand-text"><b>offroad<em>.web.id</em></b><small>4x4 Expedition &amp;
-                Outbound</small></span></a>
-          <p class="small mt-3">Penyedia gathering outbound, team building, dan ekspedisi offroad 4x4 untuk korporasi,
-            komunitas, dan keluarga di rute Batu, Pujon, Malang, dan Bromo.</p>
+              alt=""><span class="brand-text"><b>offroad<em>.web.id</em></b></span></a>
+          <p class="small mt-3">Penyedia paket offroad, team building dan sewa Jeep 4x4 untuk gathering perusahaan, komunitas, dan keluarga di rute Kota Batu, Coban Talun, Pujon, dan Bromo.</p>
           <div class="social">
             <a href="https://instagram.com/offroad.web.id" target="_blank" rel="noopener"
               aria-label="Instagram offroad.web.id"><i class="bi bi-instagram"></i></a>
@@ -383,7 +316,7 @@
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="tentang-kami.html">Tentang Kami</a></li>
-            <li><a href="paket-outbound.html">Paket Outbound</a></li>
+            <li><a href="paket.html">Paket</a></li>
             <li><a href="galeri.html">Galeri</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="kontak.html">Kontak</a></li>
@@ -419,9 +352,6 @@
             </svg>
             <div class="legend"><span>Batu</span><span>Selecta</span><span>Probolinggo</span></div>
           </div>
-          <h2 class="footer-title">Metode Pembayaran</h2>
-          <div class="pay-chips"><span>BCA</span><span>MANDIRI</span><span>BRI</span><span>QRIS</span><span>TRANSFER
-              B2B</span></div>
         </div>
       </div>
       <div class="footer-base d-flex flex-wrap justify-content-between gap-2">

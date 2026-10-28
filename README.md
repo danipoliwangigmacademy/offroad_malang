@@ -9,7 +9,7 @@ sudah ada di `assets/`, jadi situs tidak bergantung pada CDN.
 |---|---|
 | `index.html` | Landing page (hero, tentang, nilai tambah, paket, keunggulan, testimoni, FAQ, CTA) |
 | `tentang-kami.html` | Profil, visi-misi, armada, tim, legalitas |
-| `paket-outbound.html` | Katalog + filter, rundown, estimator anggaran, protokol K3, FAQ |
+| `paket.html` | Katalog + filter, rundown, estimator anggaran, protokol K3, FAQ |
 | `galeri.html` | Video, galeri foto (filter + lightbox), fasilitas dokumentasi |
 | `blog.html` / `blog/artikel.html` | Daftar artikel + 1 contoh artikel (salin `blog/artikel.html` untuk artikel baru) |
 | `kontak.html` | Saluran kontak, formulir reservasi, basecamp, alur reservasi, FAQ |
